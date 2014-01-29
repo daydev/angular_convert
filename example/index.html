@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Concatenate or Sum</title>
+</head>
+<body ng-app>
+<h3>Type into inputs and see the difference in result. </h3>
+
+<div example-ctrl>
+    <h3>Default mapping</h3>
+
+    <p>
+        x1: <input type="text" ng-model="ctrl.x1"/>
+        y1: <input type="text" ng-model="ctrl.y1"/>
+        (x1 + y1) is <strong>{{ctrl.x1 + ctrl.y1}}</strong>
+    </p>
+
+    <h3>Mapping with numeric converter</h3>
+
+    <p>
+        x2: <input type="text" ng-model="ctrl.x2" ngx-conv-num/>
+        y2: <input type="text" ng-model="ctrl.y2" ngx-conv-num/>
+        (x2 + y2) is <strong>{{ctrl.x2 + ctrl.y2}}</strong>
+    </p>
+
+</div>
+<script type="application/dart" src="main.dart"></script>
+<script src="../packages/browser/dart.js"></script>
+</body>
+</html>
