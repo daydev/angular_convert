@@ -1,7 +1,6 @@
 part of angular.convert;
 
 @NgDirective(selector: 'input[type=date][ng-model][ngx-conv-date]')
-
 class NgxConvDate extends NgxConvDirective<DateTime> {
   final InputElement input;
 
@@ -21,7 +20,6 @@ class NgxConvDate extends NgxConvDirective<DateTime> {
   }
 
   @override
-
   DateTime convert(String val) {
     if (val == null) {
       return null;

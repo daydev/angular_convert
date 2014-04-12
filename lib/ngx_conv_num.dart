@@ -1,16 +1,14 @@
 part of angular.convert;
 /**
-* Converter for numeric values binded to basic [type=text] inputs of select elements.
-* For specifically numeric inputs see [NgxConvNumNumericInput]
-*/
+ * Converter for numeric values binded to basic [type=text] inputs of select elements.
+ * For specifically numeric inputs see [NgxConvNumNumericInput]
+ */
 @NgDirective(selector: "input[type=text][ng-model][ngx-conv-num]")
 @NgDirective(selector: "select[ng-model][ngx-conv-num]")
-
 class NgxConvNumBasicInput extends NgxConvDirective<num> {
   NgxConvNumBasicInput(NgModel ngModel): super(ngModel);
 
   @override
-
   num convert(String val) {
     if (val == null || val == "") {
       return null;
@@ -24,7 +22,6 @@ class NgxConvNumBasicInput extends NgxConvDirective<num> {
   }
 
   @override
-
   String unconvert(num value) {
     if (value == null) {
       return null;
@@ -36,12 +33,11 @@ class NgxConvNumBasicInput extends NgxConvDirective<num> {
   }
 }
 /**
-* Converter for numeric values binded to numeric inputs ([type=number] and [type=range])
-* For basic inputs see [NgxConvNumBasicInput]
-*/
+ * Converter for numeric values binded to numeric inputs ([type=number] and [type=range])
+ * For basic inputs see [NgxConvNumBasicInput]
+ */
 @NgDirective(selector: "input[type=number][ng-model][ngx-conv-num]")
 @NgDirective(selector: "input[type=range][ng-model][ngx-conv-num]")
-
 class NgxConvNumNumericInput extends NgxConvNumBasicInput {
   final InputElement input;
 

@@ -4,7 +4,6 @@ part of angular_transform;
     selector: "[example-ctrl]",
     publishAs: "ctrl"
     )
-
 class ExampleController {
   Scope scope;
 
