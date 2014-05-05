@@ -9,11 +9,11 @@ abstract class NgxConvDirective<T> {
 
   NgxConvDirective(this.ngModel) {
     var setter = ngModel.setter;
-    ngModel.setter = (var value) {
+    ngModel.setter = (var value, [__]) {
       setter(convert(value));
     };
-    var getter = ngModel.getter;
-    ngModel.getter = () => unconvert(getter());
+    var getter = ngModel.render;
+    ngModel.render = (value) => unconvert(getter(value));
   }
 
   T convert(String value);

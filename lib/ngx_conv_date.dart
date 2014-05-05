@@ -1,6 +1,6 @@
 part of angular.convert;
 
-@NgDirective(selector: 'input[type=date][ng-model][ngx-conv-date]')
+@Decorator(selector: 'input[type=date][ng-model][ngx-conv-date]')
 class NgxConvDate extends NgxConvDirective<DateTime> {
   final InputElement input;
 
