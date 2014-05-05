@@ -4,7 +4,7 @@ author: Egor Day <edaydev@gmail.com>
 description: Type conversion directives for angular.dart's ngModel
 homepage: https://github.com/daydev/angular_convert.git
 dependencies:
-  angular: any
+  angular: ">=0.10.0 <0.11.0"
 dev_dependencies:
   browser: any
   hop: any

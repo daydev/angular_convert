@@ -1,6 +1,6 @@
 part of angular_transform;
 
-@NgController(
+@Controller(
     selector: "[example-ctrl]",
     publishAs: "ctrl"
     )
