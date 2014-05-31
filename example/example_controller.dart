@@ -1,11 +1,9 @@
 part of angular_transform;
 
-@NgController(
+@Controller(
     selector: "[example-ctrl]",
-    publishAs: "ctrl"
-    )
+    publishAs: "ctrl")
 class ExampleController {
-  Scope scope;
 
   int x1 = 0;
 
@@ -15,5 +13,4 @@ class ExampleController {
 
   int y2 = 0;
 
-  ExampleController();
 }

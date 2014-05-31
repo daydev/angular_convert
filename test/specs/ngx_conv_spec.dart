@@ -43,7 +43,7 @@ abstract class NgxConvSpec {
     if (f != null) {
       schedule(f);
     }
-    schedule(() => scope.$digest());
+    schedule(() => scope.apply());
   }
 
 }

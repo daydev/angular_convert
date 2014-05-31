@@ -13,7 +13,7 @@ main(List<String> args) {
 Task unitTestTask() {
   final allPassedRegExp = new RegExp('All \\d+ tests passed');
   return new Task((TaskContext ctx) {
-    ctx.info("Running Tests....");
+    ctx.info("Running Tests...");
     var result = Process.run('content_shell', ['--dump-render-tree', 'test/angular_convert_spec.html'])
     .then((ProcessResult process) {
       ctx.info(process.stdout);

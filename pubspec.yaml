@@ -1,11 +1,12 @@
 name: angular_convert
-version: 0.0.5
+version: 0.1.0
 author: Egor Day <edaydev@gmail.com>
-description: Type conversion directives for angular.dart's ngModel
+description: View/model conversion directives for angular.dart's ngModel
 homepage: https://github.com/daydev/angular_convert.git
 dependencies:
   angular: any
 dev_dependencies:
   browser: any
   hop: any
+  mock: any
   scheduled_test: any

@@ -104,57 +104,11 @@ class NgxConvNumSpec extends NgxConvSpec {
       });
     });
 
-    test("should update model value when numeric input value changes", () {
-      _compile(_numberInput);
-      schedule(() {
-        element.valueAsNumber = 42 ;
-        tb.triggerEvent(element, 'change');
-        expect(x, 42);
-        element.valueAsNumber = 42.1 ;
-        tb.triggerEvent(element, 'change');
-        expect(x, 42.1);
-      });
-    });
-
-    test("should update numeric input value when model values changes", () {
-      _compile(_numberInput);
-      _apply(() {
-        expect(x, 0);
-        x = 42;
-      }) ;
-      schedule(() {
-        expect(element.valueAsNumber, 42);
-      });
-      _apply(() {
-        x = 42.1;
-      }) ;
-      schedule(() {
-        expect(element.valueAsNumber, 42.1);
-      });
-    });
-
-    test("should set numeric input value when model value is null", () {
-      _compile(_numberInput);
-      _apply(() {
-        expect(x, 0);
-        x = 42;
-      }) ;
-      schedule(() {
-        expect(element.valueAsNumber, 42);
-      });
-      _apply(() {
-        x = null;
-      }) ;
-      schedule(() {
-        expect(element.valueAsNumber, 0);
-      });
-    });
-
   }
 
   void initScope() {
     model["x"] = 0;
-    scope["model"] = model;
+    scope.context["model"] = model;
   }
 
   String get _input => '<input type="text" ng-model="model.x" ngx-conv-num />';
@@ -164,8 +118,6 @@ class NgxConvNumSpec extends NgxConvSpec {
   '<option id="integer" value="43">43</option>'
   '<option id="float" value="43.1">43.1</option>'
   '</select>';
-
-  String get _numberInput => '<input type="number" ng-model="model.x" ngx-conv-num />';
 
   num get x => model["x"];
 

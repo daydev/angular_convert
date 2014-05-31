@@ -11,12 +11,10 @@ import 'package:angular_convert/angular_convert.dart';
 
 part 'specs/ngx_conv_spec.dart';
 part 'specs/ngx_conv_num_spec.dart';
-part 'specs/ngx_conv_date_spec.dart';
 
 main() {
   List<NgxConvSpec> specs = [
-      new NgxConvNumSpec(),
-      new NgxConvDateSpec()
+      new NgxConvNumSpec()
   ];
 
   specs.forEach((spec) => spec.doTest());
